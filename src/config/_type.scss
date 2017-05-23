@@ -1,0 +1,104 @@
+// =============================================================================
+// Type
+// =============================================================================
+// Keep consistant font styles throughout the site accessing mixins.
+
+
+// Fonts
+// =============================================================================
+
+$font-faces: (
+    //SansationBold: 'sansation/Sansation-Bold-webfont',
+    sansation_lightlight: 'sansation/Sansation-Light-webfont',
+    //Sansation: 'sansation/Sansation-Regular-webfont'
+);
+
+$font-family-sans: Source Sans Pro, sans-serif;
+$font-family-serif: serif;
+$font-family-mono: Source Code Pro, monospace;
+$font-family-brand: sansation_lightlight;
+
+$base-font-family: $font-family-sans;
+$heading-font-family: $font-family-brand, $font-family-sans;
+
+
+// Rhythm
+// =============================================================================
+
+$base-scale: 1.5;
+
+$base-unit: 'em';
+$base-font-size: 18px;
+$base-line-height: $base-scale * $base-font-size;
+
+$indent-amount: $base-scale * $base-font-size;
+
+$h1-font-size: 2.7 * $base-font-size;
+$h2-font-size: 1.25 * $base-font-size;
+$h3-font-size: 1.15 * $base-font-size;
+
+
+// Style
+// =============================================================================
+
+@mixin type-base {
+    -webkit-font-smoothing: antialiased;
+    font-family: $base-font-family;
+    font-weight: 300;
+}
+
+@mixin type-code {
+    $font-size: $base-font-size - 2px;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-family: $font-family-mono;
+    font-size: em($font-size);
+    font-weight: 300;
+}
+
+@mixin type-brand {
+    font-family: $font-family-brand;
+    font-weight: 200;
+//    letter-spacing: -1px;
+}
+
+@mixin type-heading {
+    font-family: $heading-font-family;
+    font-weight: 100;
+    text-rendering: optimizelegibility;
+}
+
+
+// Font Faces Processing
+// =============================================================================
+
+@mixin webfont ($family, $file) {
+    @font-face {
+        font-family: '#{$family}';
+        font-style: normal;
+        font-weight: normal;
+        src: url('../fonts/#{$file}.eot'),
+        url('../fonts/#{$file}.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/#{$file}.woff2') format('woff2'),
+        url('../fonts/#{$file}.woff') format('woff'),
+        url('../fonts/#{$file}.ttf') format('truetype'),
+        url('../fonts/#{$file}.svg##{$family}') format('svg');
+    }
+}
+
+@each $family, $file in $font-faces {
+    @include webfont($family, $file);
+}
+
+
+// Set Type
+// =============================================================================
+
+@mixin set-type($font-size, $margin: 1 0) {
+    @include normalize-font-size($font-size);
+    @if $normalize-vertical-rhythm {
+        @include normalize-line-height($font-size);
+    }
+    @if $normalize-vertical-rhythm {
+        @include normalize-margin($margin, $font-size);
+    }
+}

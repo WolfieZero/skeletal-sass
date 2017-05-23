@@ -1,0 +1,48 @@
+// =============================================================================
+// Lists
+// =============================================================================
+
+
+// Horizontal
+// =============================================================================
+// If you want to ensure all items are bumped upto each other without removing
+// the space between list items then replace `display: inline-block;` with
+// 'float: left;'. You will lose aligning ability though.
+
+@mixin horizontal-list {
+    > li {
+        display: inline-block;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.horizontal-list {
+    @include horizontal-list;
+}
+
+
+// No Style
+// =============================================================================
+
+@mixin unstyled-list {
+    list-style: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    li {
+        margin-left: 0;
+    }
+}
+
+.unstyled-list {
+    @include unstyled-list;
+}

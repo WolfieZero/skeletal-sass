@@ -1,0 +1,25 @@
+{
+  "name": "skeletal-sass",
+  "version": "1.0.0",
+  "description": "Sass Boilerplate   for Apps",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently -k \"npm run serve\" \"npm run watch\"",
+    "build": "node-sass --include-path node_modules src/app.scss test/app.css -o",
+    "watch": "node-sass --include-path node_modules src/app.scss test/app.css -wo",
+    "serve": "lite-server --baseDir=\"test\""
+  },
+  "author": "Neil Sweeney",
+  "license": "MIT",
+  "dependencies": {
+    "include-media": "^1.4.9",
+    "node-sass": "^3.11.1",
+    "normalize-scss": "^6.0.0",
+    "sass-ems": "^1.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^3.4.0",
+    "lite-server": "^2.3.0"
+  }
+}

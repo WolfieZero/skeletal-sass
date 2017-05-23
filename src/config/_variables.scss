@@ -1,0 +1,57 @@
+// =============================================================================
+// Variables
+// =============================================================================
+
+
+
+// Typography
+// =============================================================================
+
+$type-test: true;
+$vertical-guide: #c09;
+$normalize-vertical-rhythm: true;
+
+$font-size: (
+    xl: 32px,
+    l:  20px,
+    m:  16px,
+    s:  12px,
+);
+
+
+// Form Elements
+// =============================================================================
+
+$form-item-height: 32px;
+$form-item-line-height: 24px;
+
+$form-item-margin-bottom: .5rem;
+$form-item-margin-top: .5rem;
+
+
+// Views
+// =============================================================================
+// If you change the key, make sure all dependancies reflect the change.
+
+$breakpoints: (
+    phone: 400px,
+    tablet: 768px,
+    desktop: 1024px
+);
+
+
+// Container
+// =============================================================================
+
+$container: (
+    base: (
+        margin: auto,
+        max-width: 80%
+    ),
+    tablet: (
+        width: 650px
+    ),
+    desktop: (
+        width: 700px
+    )
+);

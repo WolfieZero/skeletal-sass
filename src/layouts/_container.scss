@@ -1,0 +1,16 @@
+// =============================================================================
+// Container
+// =============================================================================
+
+
+.container {
+    @each $media, $meta in $container {
+        @if $media == 'base' {
+            @include attribute-map($meta);
+        } @else {
+            @include media('>#{$media}') {
+                @include attribute-map($meta);
+            }
+        }
+    }
+}

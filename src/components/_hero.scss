@@ -1,0 +1,54 @@
+// =============================================================================
+// Hero
+// =============================================================================
+
+
+.hero {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    // Height modifiers
+    // =========================================================================
+
+    &--full {
+        height: 100vh;
+    }
+
+    &--majority {
+        height: 75vh;
+    }
+
+    &--half {
+        height: 50vh;
+    }
+
+    &--minority {
+        height: 25vh;
+    }
+
+    &--big {
+        height: $base-line-height * 20;
+    }
+
+
+    // Elements
+    // =========================================================================
+
+    &__header,
+    &__footer {
+        flex-shrink: 0;
+    }
+
+    &__body {
+        align-items: center;
+        display: flex;
+        flex-grow: 1;
+    }
+
+    &__container {
+        flex-grow: 1;
+    }
+}

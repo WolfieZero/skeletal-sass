@@ -1,0 +1,32 @@
+// =============================================================================
+// Specifics >> Home
+// =============================================================================
+
+
+.home-hero {
+    $opacity: .35;
+    background-image: linear-gradient(
+        45deg,
+        rgba(darken($color-brand, 10%), $opacity),
+        rgba(lighten($color-brand, 10%), $opacity)
+    );
+    text-align: center;
+
+    &__title {
+        @include media('>tablet') {
+            @include set-type(75px);
+        }
+
+        @include set-type(65px);
+
+        > span {
+            color: $color-brand;
+        }
+    }
+
+    &__blurb {
+        @include set-type(22px);
+        @include type-brand;
+    }
+
+}

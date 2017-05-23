@@ -1,0 +1,27 @@
+// =============================================================================
+// Navigation
+// =============================================================================
+
+
+.navigation {
+    @include type-brand;
+    background-color: rgba($black, .75);
+    text-transform: lowercase;
+
+    a {
+        border: 0;
+    }
+
+    &__list {
+        @include horizontal-list;
+        @include unstyled-list;
+
+        margin-bottom: .75em;
+        margin-top: .75rem;
+    }
+
+    &__item {
+        font-size: 1.2rem;
+        margin: 0 1rem;
+    }
+}
