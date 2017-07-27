@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "Sass Boilerplate   for Apps",
   "main": "index.html",
+  "sasslintConfig": ".sass-lint.yml",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently -k \"npm run serve\" \"npm run watch\"",
+    "lint": "sass-lint --verbose",
     "build": "node-sass --include-path node_modules src/app.scss test/app.css -o",
     "watch": "node-sass --include-path node_modules src/app.scss test/app.css -wo",
     "serve": "lite-server --baseDir=\"test\""
@@ -16,7 +18,8 @@
     "include-media": "^1.4.9",
     "node-sass": "^3.11.1",
     "normalize-scss": "^6.0.0",
-    "sass-ems": "^1.0.3"
+    "sass-ems": "^1.0.3",
+    "sass-lint": "^1.10.2"
   },
   "devDependencies": {
     "concurrently": "^3.4.0",
