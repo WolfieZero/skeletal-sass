@@ -28,41 +28,47 @@ rules:
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/attribute-quotes.md
   attribute-quotes:
     - 1
-    - include: true
+    -
+      include: true
 
   # Enforce how many elements a BEM selector can contain.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/bem-depth.md
   bem-depth:
     - 1
-    - max-depth: 2
+    -
+      max-depth: 2
 
   # Enforce whether one should use 0 or none when specifying a zero border value.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/border-zero.md
   border-zero:
     - 2
-    - convention: 0
+    -
+      convention: 0
 
   # Enforce the use of the chosen brace style.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/brace-style.md
   brace-style:
     - 2
-    - style: '1tbs'
-    - allow-single-line: false
+    -
+      style: 1tbs
+      allow-single-line: false
 
   # Enforce a convention for class names.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/class-name-format.md
   class-name-format:
-    - 1
-    - allow-leading-underscore: false
-    - convention: strictbem
+    - 2
+    -
+      allow-leading-underscore: false
+      convention: hyphenatedbem
 
   # Enforce whether or not @import paths should have leading underscores and/or
   # filename extensions.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/clean-import-paths.md
   clean-import-paths:
     - 2
-    - leading-underscore: false
-    - filename-extension: false
+    -
+      leading-underscore: false
+      filename-extension: false
 
   # Enforce that declarations should be written before nesting in a ruleset
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/declarations-before-nesting.md
@@ -73,15 +79,17 @@ rules:
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/empty-args.md
   empty-args:
     - 2
-    - include: false
+    -
+      include: false
 
   # Enforce whether or not nested blocks should include a space between the last
   # non-comment declaration or not.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/empty-line-between-blocks.md
   empty-line-between-blocks:
     - 1
-    - include: true
-    - allow-single-line-ruleset: false
+    -
+      include: true
+      allow-single-line-ruleset: false
 
   # Enforce that extends should be written before declarations in a ruleset.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/extends-before-declarations.md
@@ -95,7 +103,8 @@ rules:
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/final-newline.md
   final-newline:
     - 1
-    - include: true
+    -
+      include: true
 
   # Enforce the nesting of attributes
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/force-attribute-nesting.md
@@ -112,69 +121,83 @@ rules:
   # Enforce a convention for function names.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/function-name-format.md
   function-name-format:
-    - 1
-    - allow-leading-underscore: false
-    - convention: strictbem
+    - 2
+    -
+      allow-leading-underscore: false
+      convention: hyphenatedbem
 
   # Enforce the length of hexadecimal values.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/hex-length.md
   hex-length:
-    - style: short
+    - 2
+    -
+      style: short
 
   # Enforce the case of hexadecimal values.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/hex-notation.md
   hex-notation:
-    - style: lowercase
+    - 1
+    -
+      style: lowercase
 
   # Enforce a convention for ids. May not be enforced due to `no-ids` rule.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/id-name-format.md
   id-name-format:
     - 1
-    - allow-leading-underscore: true
-    - convention: hyphenatedlowercase
+    -
+      allow-leading-underscore: true
+      convention: hyphenatedlowercase
 
   # Enforce an indentation size (tabs and spaces) and it will also ensure that
   # tabs and spaces are not mixed.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/indentation.md
   indentation:
     - 1
-    - size: 4
+    -
+      size: 4
 
   # Enforce whether or not decimal numbers should include a leading zero.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/leading-zero.md
   leading-zero:
     - 2
-    - inlcude: false
+    -
+      inlcude: false
 
   # £nforce that a file's length doesn't exceed a certain number of lines.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/max-file-line-count.md
   max-file-line-count:
     - 1
-    - length: 300
+    -
+      length: 300
 
   # Enforce that lines do not exceed a max length / limit.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/max-line-length.md
   max-line-length:
     - 1
-    - length: 80
+    -
+      length: 80
 
   # Enforce a convention for mixin names.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/mixin-name-format.md
   mixin-name-format:
     - 1
-    - allow-leading-underscore: true
-    - convention: hyphenatedlowercase
+    -
+      allow-leading-underscore: true
+      convention: hyphenatedlowercase
 
   # Enforce that mixins should be written before declarations in a ruleset.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/mixins-before-declarations.md
   mixins-before-declarations:
     - 1
-    - exclude: ['breakpoint', 'mq', 'include-media']
+    -
+      exclude: ['breakpoint', 'mq', 'include-media']
 
   # Enforce how deeply a selector can be nested.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/nesting-depth.md
   nesting-depth:
-    - max-depth: 3
+    - 2
+    -
+      max-depth: 3
 
   # Will warn against the use of attribute selectors.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/no-attribute-selectors.md
@@ -193,9 +216,10 @@ rules:
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/no-color-literals.md
   no-color-literals:
     - 2
-    - allow-map-identifiers: true
-    - allow-rgba: true
-    - allow-variable-identifier: true
+    -
+      allow-map-identifiers: true
+      allow-rgba: true
+      allow-variable-identifier: true
 
   # Will warn against the use of combinators.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/no-combinators.md
@@ -215,7 +239,8 @@ rules:
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/no-disallowed-properties.md
   no-disallowed-properties:
     - 2
-    - properties: []
+    -
+      properties: []
 
   # Enforce that duplicate properties are not allowed within the same
   # block.
@@ -248,22 +273,25 @@ rules:
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/no-mergeable-selectors.md
   no-mergeable-selectors:
     - 1
-    - whitelist: []
+    -
+      whitelist: []
 
   # Enforce the correct spelling of CSS properties and prevent the use of
   # unknown CSS properties.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/no-misspelled-properties.md
   no-misspelled-properties:
     - 2
-    - extra-properties: []
+    -
+      extra-properties: []
 
   # Enforce that selectors are not allowed to have qualifying elements.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/no-qualifying-elements.md
   no-qualifying-elements:
     - 1
-    - allow-element-with-attribute: false
-    - allow-element-with-class: false
-    - allow-element-with-id: true
+    -
+      allow-element-with-attribute: false
+      allow-element-with-class: false
+      allow-element-with-id: true
 
   # Enforce that trailing whitespace is not allowed.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/no-trailing-whitespace.md
@@ -280,7 +308,7 @@ rules:
 
   # Will warn against the use of `*` (universal) selectors.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/no-universal-selectors.md
-  no-universal-selectors: 1
+  no-universal-selectors: 0
 
   # Enforce that domains are not used within urls.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/no-url-domains.md
@@ -307,15 +335,17 @@ rules:
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/placeholder-name-format.md
   placeholder-name-format:
     - 1
-    - allow-leading-underscore: false
-    - convention: strictbem
+    -
+      allow-leading-underscore: false
+      convention: hyphenatedbem
 
   # Enforce the order in which declarations are written.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/property-sort-order.md
   property-sort-order:
     - 2
-    - order: alphabetical
-    - ignore-custom-properties: false
+    -
+      order: alphabetical
+      ignore-custom-properties: false
 
   # Disallow the use of units not specified in `global` or `per-property`. Units
   # specified `per-property` will override the `global` units for that property.
@@ -323,8 +353,9 @@ rules:
   # TODO: Define the perperty
   property-units:
     - 2
-    - global: []
-    - per-property: {}
+    -
+      global: []
+      per-property: {}
 
   # Enforce that:
   # - Pseudo-elements must start with double colons.
@@ -337,7 +368,8 @@ rules:
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/quotes.md
   quotes:
     - 1
-    - style: single
+    -
+      style: single
 
   # Enforce that values in their shorthand form are as concise as specified.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/shorthand-values.md
@@ -403,17 +435,20 @@ rules:
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/variable-for-property.md
   variable-for-property:
     - 1
-    - properties: []
+    -
+      properties: []
 
   # Enforce a convention for variable names.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/variable-name-format.md
   variable-name-format:
-    - 1
-    - allow-leading-underscore: false
-    - convention: strictbem
+    - 2
+    -
+      allow-leading-underscore: false
+      convention: hyphenatedbem
 
   # Enforce whether or not values of `0` used for length should be unitless.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/zero-unit.md
   zero-unit:
     - 2
-    - include: false
+    -
+      include: false
