@@ -317,7 +317,7 @@ rules:
   # Enforce that vendor prefixes are not allowed to be used. Should be
   # managed by a post-processor.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/no-vendor-prefixes.md
-  no-vendor-prefixes: 1
+  no-vendor-prefixes: 0
 
   # Enforce that `@warn` statements are not allowed to be used.
   # https://github.com/sasstools/sass-lint/blob/master/docs/rules/no-warn.md
