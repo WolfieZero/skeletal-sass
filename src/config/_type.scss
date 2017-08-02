@@ -3,24 +3,20 @@
 // =============================================================================
 // Keep consistant font styles throughout the site accessing mixins.
 
-
-// Fonts
+// Font
 // =============================================================================
 
 $font-faces: (
-    //SansationBold: 'sansation/Sansation-Bold-webfont',
-    sansation_lightlight: 'sansation/Sansation-Light-webfont',
-    //Sansation: 'sansation/Sansation-Regular-webfont'
+    //FontName: '../fonts/font-group-folderfont-file',
 );
 
-$font-family-sans: Source Sans Pro, sans-serif;
+$font-family-sans: sans-serif;
 $font-family-serif: serif;
-$font-family-mono: Source Code Pro, monospace;
-$font-family-brand: sansation_lightlight;
+$font-family-mono: monospace;
+$font-family-brand: 'Helvetica Neue';
 
 $base-font-family: $font-family-sans;
 $heading-font-family: $font-family-brand, $font-family-sans;
-
 
 // Rhythm
 // =============================================================================
@@ -36,7 +32,6 @@ $indent-amount: $base-scale * $base-font-size;
 $h1-font-size: 2.7 * $base-font-size;
 $h2-font-size: 1.25 * $base-font-size;
 $h3-font-size: 1.15 * $base-font-size;
-
 
 // Style
 // =============================================================================
@@ -58,7 +53,6 @@ $h3-font-size: 1.15 * $base-font-size;
 @mixin type-brand {
     font-family: $font-family-brand;
     font-weight: 200;
-//    letter-spacing: -1px;
 }
 
 @mixin type-heading {
@@ -67,28 +61,26 @@ $h3-font-size: 1.15 * $base-font-size;
     text-rendering: optimizelegibility;
 }
 
-
-// Font Faces Processing
+// Set Web Font
 // =============================================================================
 
-@mixin webfont ($family, $file) {
+@mixin webfont ($family, $asset) {
     @font-face {
         font-family: '#{$family}';
         font-style: normal;
         font-weight: normal;
-        src: url('../fonts/#{$file}.eot'),
-        url('../fonts/#{$file}.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/#{$file}.woff2') format('woff2'),
-        url('../fonts/#{$file}.woff') format('woff'),
-        url('../fonts/#{$file}.ttf') format('truetype'),
-        url('../fonts/#{$file}.svg##{$family}') format('svg');
+        src: url('#{$asset}.eot'),
+        url('#{$asset}.eot?#iefix') format('embedded-opentype'),
+        url('#{$asset}.woff2') format('woff2'),
+        url('#{$asset}.woff') format('woff'),
+        url('#{$asset}.ttf') format('truetype'),
+        url('#{$asset}.svg##{$family}') format('svg');
     }
 }
 
-@each $family, $file in $font-faces {
-    @include webfont($family, $file);
+@each $family, $asset in $font-faces {
+    @include webfont($family, $asset);
 }
-
 
 // Set Type
 // =============================================================================
