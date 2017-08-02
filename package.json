@@ -1,7 +1,7 @@
 {
   "name": "skeletal-sass",
   "version": "1.0.0",
-  "description": "Sass Boilerplate   for Apps",
+  "description": "Sass Boilerplate",
   "main": "index.html",
   "sasslintConfig": ".sass-lint.yml",
   "scripts": {
