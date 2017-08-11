@@ -2,34 +2,31 @@
 // Colors
 // =============================================================================
 
-
 // Named
 // =============================================================================
 
-$black: #171717;
+$black: #222;
 $white: #eee;
 
-
-// Specifics
+// Types
 // =============================================================================
 
 $color-brand: #a34d88;
 
 $color-accessibility: #c09;
 
-$color-positive: #008000;
+$color-positive: #080;
 $color-negative: #f00;
 $color-neutral: #ff0;
 
-
-// Base
+// Theme
 // =============================================================================
 
-$color-font: $white;
-$color-font-heading: $white;
+$color-font: $black;
+$color-font-heading: $black;
 
-$color-background: $black;
+$color-background: $white;
 
-$color-link: #c09;
+$color-link: $color-brand;
 $color-link-hover: darken($color-link, 25%);
 

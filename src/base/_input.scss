@@ -1,0 +1,19 @@
+// =============================================================================
+// Base >> Input
+// =============================================================================
+
+$input-background-color: $color-brand;
+
+$input-border-color: #444 !default;
+$input-background-color: #fefefe !default;
+$input-font-family: sans-serif !default;
+
+input,
+.input {
+    background-color: $input-background-color;
+    border: 1px solid $input-border-color;
+    font-family: $input-font-family;
+    font-size: 1em;
+    line-height: 1em;
+    margin: 0;
+}

@@ -2,9 +2,7 @@
 // Styles
 // =============================================================================
 
-
 @charset 'UTF-8';
-
 
 // Config
 // =============================================================================
@@ -12,7 +10,6 @@
 @import 'config/colors';
 @import 'config/variables';
 @import 'config/type';
-
 
 // Libraries
 // =============================================================================
@@ -23,9 +20,9 @@
 @import 'normalize-scss/sass/normalize';
 @import 'sass-ems/index';
 
-
-// Defaults
+// Base
 // =============================================================================
+// Styling of base elements including addon styles for those elements.
 
 @include normalize(
     document
@@ -34,32 +31,27 @@
     links
     text
     //embedded
-    //forms
+    forms
     //interactive
     //scripting
     //hidden
 );
+@import 'base/button';
 @import 'base/document';
 @import 'base/links';
 @import 'base/lists';
+@import 'base/input';
 @import 'base/typography';
-
-
-// Layouts
-// =============================================================================
-
-@import 'layouts/container';
-@import 'layouts/flex-grid';
-
 
 // Components
 // =============================================================================
 
+@import 'components/container';
+@import 'components/flex-grid';
 @import 'components/hero';
 @import 'components/navigation';
 
-
-// Specifics
+// UI
 // =============================================================================
 
-@import 'specifics/home';
+@import 'ui/home';

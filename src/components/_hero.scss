@@ -1,14 +1,14 @@
 // =============================================================================
-// Hero
+// Components >> Hero
 // =============================================================================
-
+// @require
+// --
 
 .hero {
     align-items: stretch;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 
     // Height modifiers
     // =========================================================================
@@ -33,7 +33,6 @@
         height: $base-line-height * 20;
     }
 
-
     // Elements
     // =========================================================================
 
@@ -51,4 +50,13 @@
     &__container {
         flex-grow: 1;
     }
+}
+
+.hero__header {
+    border: 0;
+    content: '';
+}
+
+.block-name__elem-name {
+    content: '';
 }

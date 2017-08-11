@@ -2,14 +2,19 @@
 // Base >> Links
 // =============================================================================
 
+$link-border-bottom: 1px solid $white !default;
+$link-color: #c09 !default;
+$link-decoration: none !default;
+
+$link-border-bottom--focus: 1px solid #c09 !default;
 
 a {
     border-bottom: 1px dotted $white;
-    color: $color-link;
-    text-decoration: none;
+    color: $link-color;
+    text-decoration: $link-decoration;
 
     &:focus,
     &:hover {
-        border-bottom: 1px solid $color-accessibility;
+        border-bottom: $link-border-bottom--focus;
     }
 }

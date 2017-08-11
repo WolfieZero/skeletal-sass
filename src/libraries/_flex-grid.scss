@@ -1,0 +1,43 @@
+// =============================================================================
+// Libraries >> Flex Grid
+// =============================================================================
+// TODO: Make into mixin
+// TODO: look into using calc()
+
+$grid-parent-name: 'row' !default;
+$grid-child-name: 'col' !default;
+$grid-columns: 3 !default;
+$grid-space: 5% !default;
+$grid-custom-sizes: (
+    some: 25%,
+    half: 50%,
+    most: 75%,
+    full: 100%
+) !default;
+
+.#{$grid-parent-name} {
+    & {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        > .#{$grid-child-name} {
+            flex: none;
+            width: 100%;
+        }
+    }
+
+    @for $i from 1 through $grid-columns {
+        $width: percentage($i / $grid-columns);
+
+        > .#{$grid-child-name}--#{$i} {
+            width: $width - $grid-space;
+        }
+    }
+
+    @each $name, $width in $grid-custom-sizes {
+        > .#{$grid-child-name}--#{$name} {
+            width: $width - $grid-space;
+        }
+    }
+}
